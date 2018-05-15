@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-07-02T14:48:30Z" product-name="if_whitevita">
+		<header/>
+		<body>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.hash">
+				<source>ifPage Validate-Key</source>
+				<target>ifPage Validierungs-Code</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.table">
+				<source>Themeconfigurations</source>
+				<target>Theme-Konfigurationen</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.name">
+				<source>name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.theme">
+				<source>theme</source>
+				<target>Theme</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.theme.empty">
+				<source>-- CHOOSE INSTALLED TEMPLATE --</source>
+				<target>-- Bitte wählen --</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.scssfile">
+				<source>SCSS-File with color config (generated)</source>
+				<target>SCSS-File mit Farbkonfiguration (generiert)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.cssfile">
+				<source>CSS-File with theme styles (compiled)</source>
+				<target>CSS-Datei (kompiliert)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.color">
+				<source>color</source>
+				<target>Farbe</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.emptycolor">
+				<source>-- Choose Color --</source>
+				<target>-- Bitte wählen --</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.font">
+				<source>Font</source>
+				<target>Schriftart</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.emptyfont">
+				<source>-- Choose Font --</source>
+				<target>-- Bitte wählen --</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontstyle">
+				<source>Fontstyle</source>
+				<target>Schrift-Stil</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontstyle.normal">
+				<source>normal (Default)</source>
+				<target>normal (Standard)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontstyle.italic">
+				<source>italic</source>
+				<target>kursiv</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontweight">
+				<source>Fontweight</source>
+				<target>Schrift-Dicke</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontweight.200">
+				<source>200 - Extra-Light</source>
+				<target>200 - Extra-Light</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontweight.300">
+				<source>300 - Light</source>
+				<target>300 - Light</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontweight.400">
+				<source>400 - Normal (DEFAULT)</source>
+				<target>400 - Normal (Standard)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontweight.500">
+				<source>500 - Semi-Bold</source>
+				<target>500 - Semi-Bold</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontweight.600">
+				<source>600 - Bold</source>
+				<target>600 - Bold</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.fontweight.700">
+				<source>700 - Ultra-Bold</source>
+				<target>700 - Ultra-Bold</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.colorshemes">
+				<source>Colorshemes</source>
+				<target>Farbschema</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.label.general">
+				<source>General</source>
+				<target>Allgemeines</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.label.generated">
+				<source>Generated</source>
+				<target>Erzeugte Dateien</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_themeconfiguration.label.colorshemes">
+				<source>Colorshemes</source>
+				<target>Farbschema</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_color.table">
+				<source>Colors</source>
+				<target>Farben</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_color.red">
+				<source>Red</source>
+				<target>Rot</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_color.green">
+				<source>Green</source>
+				<target>Grün</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_color.blue">
+				<source>Blue</source>
+				<target>Blau</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_color.opacity">
+				<source>Opacity as %</source>
+				<target>Deckkraft in %</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_color.hex">
+				<source>Hex-value</source>
+				<target>Hex-Wert</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_color.label.opacity">
+				<source>Opacity</source>
+				<target>Deckkraft</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.div.general">
+				<source>General</source>
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.div.google">
+				<source>Google-Config</source>
+				<target>Google-Konfiguration</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.div.regular">
+				<source>Regular</source>
+				<target>Regular</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.div.bold">
+				<source>Bold</source>
+				<target>Fett</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.div.italic">
+				<source>Italic</source>
+				<target>Kursiv</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.div.bolditalic">
+				<source>Bold-Italic</source>
+				<target>Fett-Kursiv</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.table">
+				<source>External-Fonts</source>
+				<target>Externe Schriften</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.url">
+				<source>URL to Google Font</source>
+				<target>URL der Google Font</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.fontfamily">
+				<source>CSS font-family value</source>
+				<target>CSS font-family Einstellung</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.fonttype">
+				<source>Font-Type</source>
+				<target>Schrift-Typ</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.fonttype.googlefont">
+				<source>Google-Font</source>
+				<target>Google-Font</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.fonttype.static">
+				<source>Static (@fontface)</source>
+				<target>Statisch (@fontface)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.ttf">
+				<source>ttf file (absolute Path)</source>
+				<target>ttf Datei (absoluter Pfad)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.woff">
+				<source>woff file (absolute Path)</source>
+				<target>woff Datei (absoluter Pfad)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.eot">
+				<source>eot file (absolute Path)</source>
+				<target>eot Datei (absoluter Pfad)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_font.svg">
+				<source>svg file (absolute Path)</source>
+				<target>svg Datei (absoluter Pfad)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.table">
+				<source>Colorsheme</source>
+				<target>Farbschema</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.label.general">
+				<source>General</source>
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.label.colordefinition">
+				<source>Color definition</source>
+				<target>Farbdefinition</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.palette.text">
+				<source>Text colors</source>
+				<target>Textfarben</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.theme">
+				<source>theme</source>
+				<target>Theme</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.theme.empty">
+				<source>-- CHOOSE INSTALLED TEMPLATE --</source>
+				<target>-- Bitte wählen --</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.identifier">
+				<source>Unique Identifier (value of data attribute)</source>
+				<target>Eindeutiger Identifier (wert für das data Attribut)</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.backgroundcolor">
+				<source>Background-Color</source>
+				<target>Hintergrund-Farbe</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.headercolor">
+				<source>Header-Color</source>
+				<target>Farbe der Überschriften</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.textcolor">
+				<source>Text-Color</source>
+				<target>Farbe des Textes</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.linkcolor">
+				<source>Link-Color</source>
+				<target>Farbe der Links</target>
+			</trans-unit>
+			<trans-unit id="tx_ifthemeconfiguration_domain_model_colorsheme.linkhovercolor">
+				<source>Link-Hover-Color</source>
+				<target>Farbe des Link-Hover</target>
+			</trans-unit>
+			<trans-unit id="tt_content.colorsheme">
+				<source>Colorsheme</source>
+				<target>Farb-Schema</target>
+			</trans-unit>
+			<trans-unit id="tt_content.colorsheme.empty">
+				<source>Default</source>
+				<target>Standard (keins)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

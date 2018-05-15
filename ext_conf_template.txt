@@ -1,0 +1,2 @@
+# cat=basic; type=options[Interfrog=interfrog,TYPO3 default=typo3]; label=Branding Login Screen
+beloginbranding = 

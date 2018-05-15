@@ -1,0 +1,16 @@
+/*** $identifier ***/
+*[data-colorsheme='$identifier'] {
+	background-color: $backgroundcolor;
+	h1,h2,h3,h4,h5 {
+		color: $headercolor;
+	}
+	p,ol,ul,li,strong,b,span {
+		color: $textcolor;
+	}
+	a {
+		color: $linkcolor;
+		&:hover {
+			color: $linkhovercolor;
+		}
+	}
+}

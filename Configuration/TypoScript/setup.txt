@@ -1,0 +1,40 @@
+config.tx_extbase.persistence.classes {
+	Interfrog\IfThemeconfiguration\Domain\Model\ThemeConfiguration {
+		subclasses {
+			0 = Interfrog\IfThemeconfiguration\Domain\Model\ThemeConfigurationDefault
+		}
+	}
+
+	Interfrog\IfThemeconfiguration\Domain\Model\ThemeConfigurationDefault {
+		mapping {
+			recordType = 0
+			tableName = tx_ifthemeconfiguration_domain_model_themeconfiguration
+		}
+	}
+	Interfrog\IfThemeconfiguration\Domain\Model\Colorsheme {
+		subclasses {
+			0 = Interfrog\IfThemeconfiguration\Domain\Model\ColorshemeDefault
+		}
+	}
+
+	Interfrog\IfThemeconfiguration\Domain\Model\ColorshemeDefault {
+		mapping {
+			recordType = 0
+			tableName = tx_ifthemeconfiguration_domain_model_colorsheme
+		}
+	}
+}
+
+
+lib.contentElement.variables {
+	colorsheme = RECORDS
+	colorsheme {
+		tables = tx_ifthemeconfiguration_domain_model_colorsheme
+		source.field = colorsheme
+		dontCheckPid = 1
+		conf.tx_ifthemeconfiguration_domain_model_colorsheme = TEXT
+		conf.tx_ifthemeconfiguration_domain_model_colorsheme {
+			field = identifier
+		}
+	}
+}
