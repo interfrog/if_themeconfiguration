@@ -8,7 +8,6 @@ $temporaryColumn = array(
         'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tt_content.colorsheme',
         'config' => array(
             'type' => 'select',
-            'renderType' => 'selectSingle',
             'items' => array(
                 array('LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tt_content.colorsheme.empty',0),
             ),             

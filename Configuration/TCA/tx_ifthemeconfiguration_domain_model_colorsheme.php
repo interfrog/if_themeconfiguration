@@ -17,7 +17,7 @@ $tx_ifthemeconfiguration_domain_model_colorsheme = array(
         'sortby' => 'sorting',
         'default_sortby' => ' ORDER BY name,sorting DESC',
         'dividers2tabs' => TRUE,
-        'iconfile' => ('EXT:if_themeconfiguration/Resources/Public/Images/interfrog16x16.png')
+        'iconfile' => (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Images/interfrog16x16.png')
     ),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, theme, identifier',
@@ -47,7 +47,6 @@ $tx_ifthemeconfiguration_domain_model_colorsheme = array(
             'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_colorsheme.theme',
             'config' => array(
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'items' => array(
                     array('LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_colorsheme.theme.empty', ''),
                 )
@@ -66,7 +65,6 @@ $tx_ifthemeconfiguration_domain_model_colorsheme = array(
             'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_colorsheme.backgroundcolor',
             'config' => array(
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_ifthemeconfiguration_domain_model_color',
                 'foreign_table_where' => 'ORDER BY tx_ifthemeconfiguration_domain_model_color.name ASC',
             ),
@@ -75,7 +73,6 @@ $tx_ifthemeconfiguration_domain_model_colorsheme = array(
             'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_colorsheme.headercolor',
             'config' => array(
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_ifthemeconfiguration_domain_model_color',
                 'foreign_table_where' => 'ORDER BY tx_ifthemeconfiguration_domain_model_color.name ASC',
             ),
@@ -84,7 +81,6 @@ $tx_ifthemeconfiguration_domain_model_colorsheme = array(
             'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_colorsheme.textcolor',
             'config' => array(
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_ifthemeconfiguration_domain_model_color',
                 'foreign_table_where' => 'ORDER BY tx_ifthemeconfiguration_domain_model_color.name ASC',
             ),
@@ -93,7 +89,6 @@ $tx_ifthemeconfiguration_domain_model_colorsheme = array(
             'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_colorsheme.linkcolor',
             'config' => array(
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_ifthemeconfiguration_domain_model_color',
                 'foreign_table_where' => 'ORDER BY tx_ifthemeconfiguration_domain_model_color.name ASC',
             ),
@@ -102,7 +97,6 @@ $tx_ifthemeconfiguration_domain_model_colorsheme = array(
             'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_colorsheme.linkhovercolor',
             'config' => array(
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_ifthemeconfiguration_domain_model_color',
                 'foreign_table_where' => 'ORDER BY tx_ifthemeconfiguration_domain_model_color.name ASC',
             ),

@@ -17,7 +17,7 @@ $tx_ifthemeconfiguration_domain_model_themeconfiguration = array(
         'sortby' => 'sorting',
         'default_sortby' => ' ORDER BY name,sorting DESC',
         'dividers2tabs' => TRUE,
-        'iconfile' => ('EXT:if_themeconfiguration/Resources/Public/Images/interfrog16x16.png'),
+        'iconfile' => (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Images/interfrog16x16.png'),
     ),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, theme, colorshemes, scssfile, cssfile',
@@ -45,7 +45,6 @@ $tx_ifthemeconfiguration_domain_model_themeconfiguration = array(
             'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_themeconfiguration.theme',
             'config' => array(
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'items' => array(
                     array('LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_themeconfiguration.theme.empty', ''),
                 )

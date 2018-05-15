@@ -26,15 +26,18 @@ config.tx_extbase.persistence.classes {
 }
 
 
-lib.contentElement.variables {
-	colorsheme = RECORDS
-	colorsheme {
+tt_content.stdWrap.innerWrap.cObject.default.25 = COA
+tt_content.stdWrap.innerWrap.cObject.default.25 {
+	if.isTrue.field = colorsheme
+	10 = RECORDS
+	10 {
 		tables = tx_ifthemeconfiguration_domain_model_colorsheme
 		source.field = colorsheme
 		dontCheckPid = 1
 		conf.tx_ifthemeconfiguration_domain_model_colorsheme = TEXT
 		conf.tx_ifthemeconfiguration_domain_model_colorsheme {
 			field = identifier
+			stdWrap.noTrimWrap = | data-colorsheme="|"|
 		}
 	}
 }

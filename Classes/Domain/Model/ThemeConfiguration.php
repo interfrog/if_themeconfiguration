@@ -80,25 +80,6 @@ class ThemeConfiguration extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
     }
 
     /**
-    *returns the hash
-    *
-    *@return string
-    */
-    public function getHash(){
-        return $this->hash;
-    }
-
-    /**
-    *set the hash
-    *
-    *@param string $hash
-    *@return void
-    */
-    public function setHash($hash){
-        $this->hash=$hash;
-    }
-    
-    /**
     *returns the name
     *
     *@return string

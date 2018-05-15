@@ -17,7 +17,7 @@ $tx_ifthemeconfiguration_domain_model_font = array(
         'sortby' => 'sorting',
         'default_sortby' => ' ORDER BY name,sorting DESC',
         'dividers2tabs' => TRUE,
-        'iconfile' => ('EXT:if_themeconfiguration/Resources/Public/Images/interfrog16x16.png')
+        'iconfile' => (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Images/interfrog16x16.png')
     ),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name,url,fontfamily,fonttype,ttf,woff,eot,svg,ttf_bold,woff_bold,eot_bold,svg_bold,ttf_italic,woff_italic,eot_italic,svg_italic,ttf_bolditalic,woff_bolditalic,eot_bolditalic,svg_bolditalic',
@@ -65,7 +65,6 @@ $tx_ifthemeconfiguration_domain_model_font = array(
             'label' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_font.fonttype',
             'config' => array(
                 'type' => 'select',
-                'renderType' => 'selectSingle',
                 'items' => array(
                     array('LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_font.fonttype.googlefont', ''),
                     array('LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tx_ifthemeconfiguration_domain_model_font.fonttype.static', 'static'),

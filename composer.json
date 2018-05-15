@@ -1,7 +1,7 @@
 {
     "name": "interfrog/if_themeconfiguration",
     "type": "typo3-cms-extension",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "description": "TYPO3 extension for creating themes with a style composing via TYPO3 backend",
     "keywords": [
         "TYPO3",
@@ -18,7 +18,7 @@
         "GPL-2.0+"
     ],
     "require": {
-        "typo3/cms-core": "8.*",
+        "typo3/cms-core": "7.6.*",
         "leafo/scssphp": "^0.7.4"
     },
     "config": {
