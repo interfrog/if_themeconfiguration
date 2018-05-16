@@ -6,9 +6,10 @@
     "keywords": [
         "TYPO3",
         "extension",
-        "if_themeconfiguration"
+        "theme",
+        "themeconfiguration"
     ],
-    "homepage": "http://interfrog.de",
+    "homepage": "https://www.ifpage.de",
     "authors": [{
         "name": "Interfrog Produktion GmbH",
         "role": "Developer",
