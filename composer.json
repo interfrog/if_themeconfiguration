@@ -6,9 +6,10 @@
     "keywords": [
         "TYPO3",
         "extension",
-        "if_themeconfiguration"
+        "theme",
+        "themeconfiguration"
     ],
-    "homepage": "http://interfrog.de",
+    "homepage": "https://www.ifpage.de",
     "authors": [{
         "name": "Interfrog Produktion GmbH",
         "role": "Developer",
@@ -18,7 +19,7 @@
         "GPL-2.0+"
     ],
     "require": {
-        "typo3/cms-core": "7.6.*",
+        "typo3/cms-core": "8.*",
         "leafo/scssphp": "^0.7.4"
     },
     "config": {
