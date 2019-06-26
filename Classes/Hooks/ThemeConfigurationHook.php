@@ -3,6 +3,7 @@ namespace Interfrog\IfThemeconfiguration\Hooks;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use Interfrog\IfThemeconfiguration\Utility\IfServiceUtility;
 use Interfrog\IfThemeconfiguration\Utility\SassUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility as Debug;
 
 /***************************************************************
  *  Copyright notice
@@ -58,6 +59,7 @@ class ThemeConfigurationHook implements \TYPO3\CMS\Core\SingletonInterface {
     }
 
     public function processDatamap_afterDatabaseOperations($status, $table, $id, $hookArgs, &$reference){
+
       if($table=="tx_ifthemeconfiguration_domain_model_themeconfiguration" || $table=="tx_ifthemeconfiguration_domain_model_color" || $table=="tx_ifthemeconfiguration_domain_model_font" || $table=="tx_ifthemeconfiguration_domain_model_colorsheme"){
         $this->generateSass();
       }
@@ -91,7 +93,7 @@ class ThemeConfigurationHook implements \TYPO3\CMS\Core\SingletonInterface {
       $sassString .= '@import "'.$extSassPath.'includes.scss";'."\n";
 
       $temporaryFileName = "typo3temp/".$themeconfiguration->getTheme()."-".$themeconfiguration->getUid().".scss";
-      $absoluteTempFileName = PATH_site.$temporaryFileName;
+      $absoluteTempFileName = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . "/" .$temporaryFileName;
 
       \TYPO3\CMS\Core\Utility\GeneralUtility::writeFile($absoluteTempFileName, $sassString);
 
@@ -110,8 +112,9 @@ class ThemeConfigurationHook implements \TYPO3\CMS\Core\SingletonInterface {
       $scssParser = new \Leafo\ScssPhp\Compiler();
       $cssString = $scssParser->compile($sassString);
 
-      $temporaryCSSName = "typo3temp/".$themeconfiguration->getTheme()."-".$themeconfiguration->getUid().".css";
-      $absoluteTempCSSName = PATH_site.$temporaryCSSName;
+      //seperate slash to prevent parsing as regex
+      $temporaryCSSName = "/" . "typo3temp/".$themeconfiguration->getTheme()."-".$themeconfiguration->getUid().".css";
+      $absoluteTempCSSName = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . $temporaryCSSName;
 
       \TYPO3\CMS\Core\Utility\GeneralUtility::writeFile($absoluteTempCSSName, $cssString);
 

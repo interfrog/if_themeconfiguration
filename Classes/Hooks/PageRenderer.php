@@ -46,7 +46,6 @@ class PageRenderer {
 	 */
     public function addCSS(&$params, \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer) {
 
-
     	$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
       	$themeConfigurationRepo = $objectManager->get('Interfrog\\IfThemeconfiguration\\Domain\\Repository\\ThemeConfigurationRepository');
 
