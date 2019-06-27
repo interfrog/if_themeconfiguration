@@ -59,7 +59,6 @@ class ThemeConfigurationHook implements \TYPO3\CMS\Core\SingletonInterface {
     }
 
     public function processDatamap_afterDatabaseOperations($status, $table, $id, $hookArgs, &$reference){
-
       if($table=="tx_ifthemeconfiguration_domain_model_themeconfiguration" || $table=="tx_ifthemeconfiguration_domain_model_color" || $table=="tx_ifthemeconfiguration_domain_model_font" || $table=="tx_ifthemeconfiguration_domain_model_colorsheme"){
         $this->generateSass();
       }
@@ -67,7 +66,7 @@ class ThemeConfigurationHook implements \TYPO3\CMS\Core\SingletonInterface {
 
     protected function generateSass(){
       foreach ($this->allThemeConfigurations as $themeConfiguration) {
-        if (count($this->colorRepo->findAll())>0 && count($this->fontRepo->findAll())>0) {
+        if (count($this->colorRepo->findAll())>0) {
           $this->generateSassForTheme(SassUtility::mapPropertyToSass($themeConfiguration),$themeConfiguration);
         } else {
           $defaultSassFile = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($themeConfiguration->getTheme())."Resources/Private/Sass/default.scss";
