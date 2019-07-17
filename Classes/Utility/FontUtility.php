@@ -51,18 +51,20 @@ class FontUtility {
 			$fontValue .= "   font-family: '" . $font->getName() . "';\n";
 			$fontValue .= "   font-style: normal;\n";
 			$fontValue .= "   font-weight: normal;\n";
+			$urls = [];
 			if (!empty($font->getTtf())) {
-				$fontValue .= "        url('". $font->getTtf() ."') format('truetype'), /* Safari, Android, iOS */\n";
+				$urls[] = "url('". $font->getTtf() ."') format('truetype') /* Safari, Android, iOS */\n";
 			}
-			if (!empty($font->getSvg())) {
-				$fontValue .= "   src: url('". $font->getEot() ."'); /* IE9 Compat Modes */\n";
+			if (!empty($font->getEot())) {
+				$urls[] = "url('". $font->getEot() ."') /* IE9 Compat Modes */\n";
 			}
 			if (!empty($font->getWoff())) {
-				$fontValue .= "        url('". $font->getWoff() ."') format('woff'), /* Pretty Modern Browsers */\n";
+				$urls[] = "url('". $font->getWoff() ."') format('woff') /* Pretty Modern Browsers */\n";
 			}
 			if (!empty($font->getSvg())) {
-				$fontValue .= "        url('". $font->getSvg() ."#".$font->getName()."') format('svg'), /* Legacy iOS */\n";
+				$urls[] = "url('". $font->getSvg() ."#".$font->getName()."') format('svg') /* Legacy iOS */\n";
 			}
+			$fontValue .= "src: " . implode(",",$urls);
 
 			$fontValue .= "}\n\n";
 		}
@@ -72,18 +74,20 @@ class FontUtility {
 			$fontValue .= "   font-family: '" . $font->getName() . "';\n";
 			$fontValue .= "   font-style: normal;\n";
 			$fontValue .= "   font-weight: bold;\n";
+			$urls = [];
 			if (!empty($font->getEotBold())) {
-				$fontValue .= "   src: url('". $font->getEotBold() ."'); /* IE9 Compat Modes */\n";
+				$urls[] = "url('". $font->getEotBold() ."') /* IE9 Compat Modes */\n";
 			}
 			if (!empty($font->getWoffBold())) {
-				$fontValue .= "        url('". $font->getWoffBold() ."') format('woff'), /* Pretty Modern Browsers */\n";
+				$urls[] = "url('". $font->getWoffBold() ."') format('woff') /* Pretty Modern Browsers */\n";
 			}
 			if (!empty($font->getTtfBold())) {
-				$fontValue .= "        url('". $font->getTtfBold() ."') format('truetype'), /* Safari, Android, iOS */\n";
+				$urls[] = "url('". $font->getTtfBold() ."') format('truetype') /* Safari, Android, iOS */\n";
 			}
 			if (!empty($font->getSvgBold())) {
-				$fontValue .= "        url('". $font->getSvgBold() ."#".$font->getName()."') format('svg'), /* Legacy iOS */\n";
+				$urls[] = "url('". $font->getSvgBold() ."#".$font->getName()."') format('svg') /* Legacy iOS */\n";
 			}
+			$fontValue .= "src: " . implode(",",$urls);
 
 			$fontValue .= "}\n\n";
 		}
@@ -93,18 +97,20 @@ class FontUtility {
 			$fontValue .= "   font-family: '" . $font->getName() . "';\n";
 			$fontValue .= "   font-style: italic;\n";
 			$fontValue .= "   font-weight: normal;\n";
+			$urls = [];
 			if (!empty($font->getEotItalic())) {
-				$fontValue .= "   src: url('". $font->getEotItalic() ."'); /* IE9 Compat Modes */\n";
+				$urls[] = "src: url('". $font->getEotItalic() ."') /* IE9 Compat Modes */\n";
 			}
 			if (!empty($font->getWoffItalic())) {
-				$fontValue .= "        url('". $font->getWoffItalic() ."') format('woff'), /* Pretty Modern Browsers */\n";
+				$urls[] = "url('". $font->getWoffItalic() ."') format('woff') /* Pretty Modern Browsers */\n";
 			}
 			if (!empty($font->getTtfItalic())) {
-				$fontValue .= "        url('". $font->getTtfItalic() ."') format('truetype'), /* Safari, Android, iOS */\n";
+				$urls[] = "url('". $font->getTtfItalic() ."') format('truetype') /* Safari, Android, iOS */\n";
 			}
 			if (!empty($font->getSvgItalic())) {
-				$fontValue .= "        url('". $font->getSvgItalic() ."#".$font->getName()."') format('svg'), /* Legacy iOS */\n";
+				$urls[] = "url('". $font->getSvgItalic() ."#".$font->getName()."') format('svg') /* Legacy iOS */\n";
 			}
+			$fontValue .= "src: " . implode(",",$urls);
 
 			$fontValue .= "}\n\n";
 		}
@@ -114,18 +120,20 @@ class FontUtility {
 			$fontValue .= "   font-family: '" . $font->getName() . "';\n";
 			$fontValue .= "   font-style: italic;\n";
 			$fontValue .= "   font-weight: bold;\n";
+			$urls = [];
 			if (!empty($font->getEotBolditalic())) {
-				$fontValue .= "   src: url('". $font->getEotBolditalic() ."'); /* IE9 Compat Modes */\n";
+				$urls[] = "src: url('". $font->getEotBolditalic() ."') /* IE9 Compat Modes */\n";
 			}
 			if (!empty($font->getWoffBolditalic())) {
-				$fontValue .= "        url('". $font->getWoffBolditalic() ."') format('woff'), /* Pretty Modern Browsers */\n";
+				$urls[] = "url('". $font->getWoffBolditalic() ."') format('woff') /* Pretty Modern Browsers */\n";
 			}
 			if (!empty($font->getTtfBolditalic())) {
-				$fontValue .= "        url('". $font->getTtfBolditalic() ."') format('truetype'), /* Safari, Android, iOS */\n";
+				$urls[] = "url('". $font->getTtfBolditalic() ."') format('truetype') /* Safari, Android, iOS */\n";
 			}
 			if (!empty($font->getSvgBolditalic())) {
-				$fontValue .= "        url('". $font->getSvgBolditalic() ."#".$font->getName()."') format('svg'), /* Legacy iOS */\n";
+				$urls[] = "url('". $font->getSvgBolditalic() ."#".$font->getName()."') format('svg') /* Legacy iOS */\n";
 			}
+			$fontValue .= "src: " . implode(",",$urls);
 
 			$fontValue .= "}\n\n";
 		}
