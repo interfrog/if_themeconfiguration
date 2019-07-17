@@ -46,16 +46,20 @@ class FontUtility {
 	public static function getStaticFontSetting(&$font) {
 		$fontValue = '';
 
-		if (!empty($font->getTtf()) && !empty($font->getEot()) && !empty($font->getWoff())) {
+		if (!empty($font->getTtf()) || !empty($font->getEot()) || !empty($font->getWoff()) || !empty($font->getSvg())) {
 			$fontValue .= "@font-face {\n";
 			$fontValue .= "   font-family: '" . $font->getName() . "';\n";
 			$fontValue .= "   font-style: normal;\n";
 			$fontValue .= "   font-weight: normal;\n";
-			$fontValue .= "   src: url('". $font->getEot() ."'); /* IE9 Compat Modes */\n";
-			$fontValue .= "   src: url('". $font->getEot() ."?#iefix') format('embedded-opentype'), /* IE6-IE8 */\n";
-			$fontValue .= "        url('". $font->getWoff() ."') format('woff'), /* Pretty Modern Browsers */\n";
-			$fontValue .= "        url('". $font->getTtf() ."') format('truetype'), /* Safari, Android, iOS */\n";
-
+			if (!empty($font->getTtf())) {
+				$fontValue .= "        url('". $font->getTtf() ."') format('truetype'), /* Safari, Android, iOS */\n";
+			}
+			if (!empty($font->getSvg())) {
+				$fontValue .= "   src: url('". $font->getEot() ."'); /* IE9 Compat Modes */\n";
+			}
+			if (!empty($font->getWoff())) {
+				$fontValue .= "        url('". $font->getWoff() ."') format('woff'), /* Pretty Modern Browsers */\n";
+			}
 			if (!empty($font->getSvg())) {
 				$fontValue .= "        url('". $font->getSvg() ."#".$font->getName()."') format('svg'), /* Legacy iOS */\n";
 			}
@@ -63,16 +67,20 @@ class FontUtility {
 			$fontValue .= "}\n\n";
 		}
 
-		if (!empty($font->getTtfBold()) && !empty($font->getEotBold()) && !empty($font->getWoffBold())) {
+		if (!empty($font->getTtfBold()) || !empty($font->getEotBold()) || !empty($font->getWoffBold()) || !empty($font->getSvgBold())) {
 			$fontValue .= "@font-face {\n";
 			$fontValue .= "   font-family: '" . $font->getName() . "';\n";
 			$fontValue .= "   font-style: normal;\n";
 			$fontValue .= "   font-weight: bold;\n";
-			$fontValue .= "   src: url('". $font->getEotBold() ."'); /* IE9 Compat Modes */\n";
-			$fontValue .= "   src: url('". $font->getEotBold() ."?#iefix') format('embedded-opentype'), /* IE6-IE8 */\n";
-			$fontValue .= "        url('". $font->getWoffBold() ."') format('woff'), /* Pretty Modern Browsers */\n";
-			$fontValue .= "        url('". $font->getTtfBold() ."') format('truetype'), /* Safari, Android, iOS */\n";
-
+			if (!empty($font->getEotBold())) {
+				$fontValue .= "   src: url('". $font->getEotBold() ."'); /* IE9 Compat Modes */\n";
+			}
+			if (!empty($font->getWoffBold())) {
+				$fontValue .= "        url('". $font->getWoffBold() ."') format('woff'), /* Pretty Modern Browsers */\n";
+			}
+			if (!empty($font->getTtfBold())) {
+				$fontValue .= "        url('". $font->getTtfBold() ."') format('truetype'), /* Safari, Android, iOS */\n";
+			}
 			if (!empty($font->getSvgBold())) {
 				$fontValue .= "        url('". $font->getSvgBold() ."#".$font->getName()."') format('svg'), /* Legacy iOS */\n";
 			}
@@ -80,16 +88,20 @@ class FontUtility {
 			$fontValue .= "}\n\n";
 		}
 
-		if (!empty($font->getTtfItalic()) && !empty($font->getEotItalic()) && !empty($font->getWoffItalic())) {
+		if (!empty($font->getTtfItalic()) || !empty($font->getEotItalic()) || !empty($font->getWoffItalic()) || !empty($font->getSvgItalic())) {
 			$fontValue .= "@font-face {\n";
 			$fontValue .= "   font-family: '" . $font->getName() . "';\n";
 			$fontValue .= "   font-style: italic;\n";
 			$fontValue .= "   font-weight: normal;\n";
-			$fontValue .= "   src: url('". $font->getEotItalic() ."'); /* IE9 Compat Modes */\n";
-			$fontValue .= "   src: url('". $font->getEotItalic() ."?#iefix') format('embedded-opentype'), /* IE6-IE8 */\n";
-			$fontValue .= "        url('". $font->getWoffItalic() ."') format('woff'), /* Pretty Modern Browsers */\n";
-			$fontValue .= "        url('". $font->getTtfItalic() ."') format('truetype'), /* Safari, Android, iOS */\n";
-
+			if (!empty($font->getEotItalic())) {
+				$fontValue .= "   src: url('". $font->getEotItalic() ."'); /* IE9 Compat Modes */\n";
+			}
+			if (!empty($font->getWoffItalic())) {
+				$fontValue .= "        url('". $font->getWoffItalic() ."') format('woff'), /* Pretty Modern Browsers */\n";
+			}
+			if (!empty($font->getTtfItalic())) {
+				$fontValue .= "        url('". $font->getTtfItalic() ."') format('truetype'), /* Safari, Android, iOS */\n";
+			}
 			if (!empty($font->getSvgItalic())) {
 				$fontValue .= "        url('". $font->getSvgItalic() ."#".$font->getName()."') format('svg'), /* Legacy iOS */\n";
 			}
@@ -97,16 +109,20 @@ class FontUtility {
 			$fontValue .= "}\n\n";
 		}
 
-		if (!empty($font->getTtfBolditalic()) && !empty($font->getEotBolditalic()) && !empty($font->getWoffBolditalic())) {
+		if (!empty($font->getTtfBolditalic()) || !empty($font->getEotBolditalic()) || !empty($font->getWoffBolditalic()) || !empty($font->getSvgBolditalic())) {
 			$fontValue .= "@font-face {\n";
 			$fontValue .= "   font-family: '" . $font->getName() . "';\n";
 			$fontValue .= "   font-style: italic;\n";
 			$fontValue .= "   font-weight: bold;\n";
-			$fontValue .= "   src: url('". $font->getEotBolditalic() ."'); /* IE9 Compat Modes */\n";
-			$fontValue .= "   src: url('". $font->getEotBolditalic() ."?#iefix') format('embedded-opentype'), /* IE6-IE8 */\n";
-			$fontValue .= "        url('". $font->getWoffBolditalic() ."') format('woff'), /* Pretty Modern Browsers */\n";
-			$fontValue .= "        url('". $font->getTtfBolditalic() ."') format('truetype'), /* Safari, Android, iOS */\n";
-
+			if (!empty($font->getEotBolditalic())) {
+				$fontValue .= "   src: url('". $font->getEotBolditalic() ."'); /* IE9 Compat Modes */\n";
+			}
+			if (!empty($font->getWoffBolditalic())) {
+				$fontValue .= "        url('". $font->getWoffBolditalic() ."') format('woff'), /* Pretty Modern Browsers */\n";
+			}
+			if (!empty($font->getTtfBolditalic())) {
+				$fontValue .= "        url('". $font->getTtfBolditalic() ."') format('truetype'), /* Safari, Android, iOS */\n";
+			}
 			if (!empty($font->getSvgBolditalic())) {
 				$fontValue .= "        url('". $font->getSvgBolditalic() ."#".$font->getName()."') format('svg'), /* Legacy iOS */\n";
 			}
